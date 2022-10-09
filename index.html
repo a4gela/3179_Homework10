@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT3179 Week 10 Homework</title>
+
+    <!-- Import VegaLite -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css and js files -->
+    <link rel="stylesheet" href="layout.css">
+    <script src="chart.js"></script>
+
+</head>
+<body>
+    <h1>An overview of Australian shark incidents</h1>
+
+    <h2>About the data</h2>
+    <p>
+        The Australian Shark-Incident Database (ASID), formerly known as the Australian Shark Attack File (ASAF), is a <br>dataset first created by members of the Taronga Conservation Society Australia in 1984. It has since kept an <br>active and uninterrupted record of shark-human interactions, from incidents reporting back from 1791 until now.
+
+        <br><br>
+
+        At present, the Australian Shark-Incident Database (ASID) is maintained by a joint partnership with Taronga <br>Conservation Society Australia, Flinders University, and the New South Wales Department of Primary Industries.
+
+    </p>
+
+    <!-- Chart 1 -->
+    <h2>Distribution of Shark-bite Incidents in Australia from 1791 to 2022</h2>
+    <p>Drag the <i>Year</i> slider to view cumulative incidents by year</p>
+    <p>Filter by <i>Provoked/Unprovoked</i> shark incidents</p>
+    <div id="incidents_distribution_map"></div>
+
+    <br><br>
+
+    <!-- Chart 2 -->
+    <h2>Top 5 perpetrators of shark-bite incidents</h2>
+    <div id="top_sharks_stacked"></div>
+
+    <br><br>
+
+    <!-- Chart 6 -->
+    <h2>What were victims doing during the incident?</h2>
+    <div id="victim_activity_bar"></div>
+
+</body>
+</html>
