@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 400,
+    "data": {"url": "https://raw.githubusercontent.com/a4gela/3179_Homework10/main/shark.csv"},
+    "transform": [
+        {
+        "aggregate": [{
+         "op": "sum",
+         "field": "UIN",
+         "as": "Number of Incidents"
+        }],
+        "groupby": ["[Shark.common.name]", "[Victim.injury]"]
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Number of Incidents",
+        "type": "quantitative",
+        "title": "Number of Incidents"
+        },
+      "y": {
+        "field": "[Shark.common.name]",
+        "type":"nominal",
+        "title": "Shark",
+        "sort": {"field":"Number of Incidents", "order":"descending"}
+        },
+      "color": {
+        "field": "[Victim.injury]",
+        "type": "ordinal",
+        "title": "Injury status",
+        "scale": {
+          "range": ["#264653", "#219EBC", "#FB8500"]
+        }
+      },
+      "tooltip": [
+        {"field": "[Shark.common.name]", "type":"nominal", "title": "Shark"},
+        {"field": "[Victim.injury]", "type": "ordinal", "title": "Injury status"},
+        {"field": "Number of Incidents", "type":"quantitative"}
+      ]
+    }
+  }
+  
