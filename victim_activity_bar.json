@@ -34,7 +34,8 @@
             "tooltip":[
                 {"field":"Victim_activity", "type":"nominal", "title":"Victim activity"},
                 {"field":"Number_of_incidents", "type":"quantitative", "title":"Number of incidents"}
-            ]
+            ],
+            "color":{"value":"#1d2951"}
         }
     }, {
         "mark":{
